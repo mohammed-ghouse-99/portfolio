@@ -63,7 +63,7 @@ const DATA = {
         "Power BI dashboard for workforce analytics — attrition, salary trends and KPIs.",
       tags: ["SQL","Power BI", "ETL", "Visual Reports"],
       repo: "https://github.com/mohammed-ghouse-99/HR-Data-Cleaning-and-Analytics",
-      image: "/public/images/pic2.jpg",
+      image: "/images/pic2.jpg",
     },
   ],
 
