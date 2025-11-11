@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Portfolio from "./Portfolio";
+import Portfolio from "./index.jsx";
 import ResearchPapers from "./ResearchPapers.jsx";
 
 
