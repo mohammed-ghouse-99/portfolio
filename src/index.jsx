@@ -15,16 +15,21 @@ const DATA = {
   github: "https://github.com/mohammed-ghouse-99",
   resume: "/resume.pdf", // replace with real resume url
   photo: "/images/profilepic.jpg",
-  intro: `I create intelligence that works in the real world, from eyes that see in real time to machines that care for health. My craft blends AI, data, and engineering into solutions that don’t just predict, but protect and perform. Every dataset hides a story; I make sure it’s one worth telling..`,
+  intro: `I’m a technology enthusiast passionate about designing intelligent, data-driven solutions.
+My expertise lies across Data Analytics, Machine Learning and new Technologies.
+From developing predictive models to creating interactive web applications.I enjoy transforming raw data into meaningful insights that drive decisions.
+Continuous learning and innovation define my approach to technology.
+I’m fascinated by how AI can support human creativity,its like having a partner in problem-solving...
+
 
   skills: [
-    "Python",
-    "PyTorch",
     "Machine Learning Algorithms",
-    "OpenCV",
-    "FastAPI",
-    "Streamlit",
+    "Python",
     "Deep Learning",
+    "OpenCV",
+    "Large Language Models",
+    "RAG",
+    "Frontend Development",
     "Structured Query Language",
     "Power BI",
   ],
