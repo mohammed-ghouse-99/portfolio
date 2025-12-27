@@ -6,7 +6,7 @@ export default function PortfolioBot() {
   const [messages, setMessages] = useState([
     {
       role: "bot",
-      text: "Hi 👋 I’m PortfolioRecruiterBot. Ask me about Mohammed’s skills, projects, or experience.",
+      text: "Hi 👋 I'm PortfolioRecruiterBot. Ask me about Mohammed's skills, projects, or experience.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -58,7 +58,7 @@ export default function PortfolioBot() {
       {/* Floating Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 bg-indigo-600 text-white px-5 py-4 rounded-full shadow-lg font-bold hover:bg-indigo-700 z-50"
+        className="fixed bottom-6 right-6 bg-gray-800 dark:bg-gray-700 text-white px-5 py-4 rounded-full shadow-lg font-bold hover:bg-gray-700 dark:hover:bg-gray-600 z-50"
       >
         🤖 Recruiter Bot
       </button>
@@ -74,14 +74,14 @@ export default function PortfolioBot() {
               fixed bottom-20 right-6
               w-[95vw] sm:w-[440px]
               h-[70vh] sm:h-[560px]
-              bg-[#0b1220]
-              border border-indigo-600
+              bg-gray-900
+              border border-gray-700
               rounded-xl shadow-xl
               z-50 flex flex-col
             "
           >
             {/* Header */}
-            <div className="p-4 border-b border-indigo-600 text-indigo-400 font-semibold text-lg">
+            <div className="p-4 border-b border-gray-700 text-gray-400 font-semibold text-lg">
               PortfolioRecruiterBot
             </div>
 
@@ -92,8 +92,8 @@ export default function PortfolioBot() {
                   key={i}
                   className={`max-w-[90%] p-3 rounded-lg ${
                     m.role === "user"
-                      ? "ml-auto bg-indigo-600 text-white"
-                      : "mr-auto bg-indigo-900 text-indigo-200"
+                      ? "ml-auto bg-gray-700 text-white"
+                      : "mr-auto bg-gray-800 text-gray-300"
                   }`}
                 >
                   <p className="whitespace-pre-wrap break-words">
@@ -102,12 +102,12 @@ export default function PortfolioBot() {
                 </div>
               ))}
               {loading && (
-                <div className="text-indigo-400 text-xs">Typing…</div>
+                <div className="text-gray-400 text-xs">Typing…</div>
               )}
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-indigo-600 flex gap-3">
+            <div className="p-4 border-t border-gray-700 flex gap-3">
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -117,12 +117,12 @@ export default function PortfolioBot() {
                     if (input.trim()) sendMessage();
                   }
                 }}
-                className="flex-1 bg-indigo-800 text-indigo-100 rounded-lg px-4 py-3 text-sm outline-none"
+                className="flex-1 bg-gray-800 text-gray-100 rounded-lg px-4 py-3 text-sm outline-none"
                 placeholder="Ask about skills, projects..."
               />
               <button
                 onClick={sendMessage}
-                className="bg-indigo-600 px-5 py-3 rounded-lg text-white font-semibold hover:bg-indigo-700"
+                className="bg-gray-700 px-5 py-3 rounded-lg text-white font-semibold hover:bg-gray-600"
               >
                 Send
               </button>
