@@ -25,16 +25,16 @@ I'm fascinated by how AI can support human creativity — for me it's like havin
 
   // Expanded skills with categories
   technicalSkills: {
-    "Machine Learning": ["Supervised Learning", "Deep Learning", "LLMs", "Computer Vision", "OpenCV"],
-    "Programming": ["Python", "SQL", "JavaScript", "React"],
-    "Tools & Frameworks": ["Power BI", "FastAPI", "Flask", "Git", "Docker"],
-    "Data Management": ["Data Analysis", "ETL", "Database Design", "Visual Reports"]
+    "Machine Learning": ["Scikitlearn", "Deep Learning", "LLMs", "OpenCV"],
+    "Programming": ["Python", "SQL", "Basic JavaScript"],
+    "Tools & Frameworks": ["Power BI", "HuggingFace", "Git"],
+    "Data Management": ["Data Analysis", "Database Design", "Visual Reports", "YFinance API"],
   },
 
   // Experience section
   experience: [
     {
-      role: "Machine Learning Intern",
+      role: "Data & ML Intern",
       company: "MS Scrap Recyclers",
       duration: "Jun 2023 - Aug 2023",
       description: "Engineered a real-time scrap detection solution using computer vision and deep learning techniques to optimize recycling processes.",
@@ -45,7 +45,7 @@ I'm fascinated by how AI can support human creativity — for me it's like havin
       company: "Academic Research Projects",
       duration: "Jan 2023 - Present",
       description: "Conducted research on IoT-based healthcare monitoring and waste management systems using ML algorithms.",
-      achievements: ["Published 2 research papers", "Developed predictive models with 95% accuracy", "Presented findings at academic conferences"]
+      achievements: ["Published 2 research papers", "Developed predictive models with 85% accuracy", "Presented findings at academic conferences"]
     }
   ],
 
@@ -54,27 +54,19 @@ I'm fascinated by how AI can support human creativity — for me it's like havin
     {
       degree: "Bachelor of Technology",
       field: "Computer Science & Engineering",
-      institution: "XYZ University",
-      duration: "2021 - 2025",
-      grade: "CGPA: 8.5/10",
-      highlights: ["Specialized in AI & ML", "Coursework in Data Structures, Algorithms, Statistics"]
+      institution: "Lords Institute of Engineering & Technology",
+      duration: "2023 - 2027",
+      grade: "CGPA: 8.0/10",
     }
   ],
 
-  // Certifications
-  certifications: [
-    "Deep Learning Specialization - Coursera",
-    "Machine Learning A-Z - Udemy",
-    "AWS Certified Cloud Practitioner",
-    "Google Data Analytics Professional Certificate"
-  ],
 
   // Stats/Counter section
   stats: [
     { label: "Projects Completed", value: "15+" },
     { label: "Research Papers", value: "2" },
     { label: "Hackathon Wins", value: "3" },
-    { label: "Technologies", value: "12+" }
+    { label: "Technologies", value: "5+" }
   ],
 
   // Featured projects (keep existing plus new)
