@@ -343,10 +343,6 @@ export default function Portfolio() {
               <div className="absolute -bottom-4 -right-4 bg-gray-800 dark:bg-gray-900 p-4 rounded-xl shadow-lg border border-gray-700">
                 <div className="flex items-center space-x-3">
                   <FaMapMarkerAlt className="text-gray-400" />
-                  <div>
-                    <div className="font-semibold">Based in</div>
-                    <div className="text-sm text-gray-400">{DATA.location}</div>
-                  </div>
                 </div>
               </div>
             </div>
