@@ -291,7 +291,7 @@ export default function Portfolio() {
             transition={{ duration: 0.7 }}
           >
             <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Designing Smarter <span className="text-gray-600 dark:text-gray-400"> Futures with </span>  AI Collaboration
+            Designing Smarter Futures with AI Collaboration <span className="text-gray-600 dark:text-gray-400"> </span> 
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
               {DATA.intro}
