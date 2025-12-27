@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 // ------------------------------
 // DATA
 // ------------------------------
+
 const DATA = {
   name: "Mohammed Ghouse Mohiuddin",
   role: "Data & Machine Learning Enthusiast",
@@ -13,14 +14,14 @@ const DATA = {
   email: "ghousenaser2005@gmail.com",
   linkedin: "http://www.linkedin.com/in/mohammed-ghouse-mohiuddin-0622a12a6",
   github: "https://github.com/mohammed-ghouse-99",
-  resume: "/resume.pdf", // replace with real resume url
+  resume: "/RESUME_Me.pdf", // replace with real resume url
   photo: "/images/profilepic.jpg",
-  intro: `I’m a technology enthusiast passionate about designing intelligent, data-driven solutions.
-My expertise lies across Data Analytics, Machine Learning and new Technologies.
-From developing predictive models to creating interactive web applications.I enjoy transforming raw data into meaningful insights that drive decisions.
-Continuous learning and innovation define my approach to technology.
-I’m fascinated by how AI can support human creativity,its like having a partner in problem-solving...
 
+  intro: `I’m a technology enthusiast, passionate about designing intelligent, data-driven solutions.
+My expertise lies across Data Analytics, Machine Learning and new Technologies.
+From developing predictive models to creating interactive web applications, I enjoy transforming raw data into meaningful insights that drive decisions.
+Continuous learning and innovation define my approach to technology.
+I’m fascinated by how AI can support human creativity — for me it’s like having a partner in problem-solving!!!`,
 
   skills: [
     "Machine Learning Algorithms",
@@ -36,18 +37,20 @@ I’m fascinated by how AI can support human creativity,its like having a partne
 
   researchPapers: [
     {
-      title: "Automated Detection of Recyclable Waste in Real-Time Using Deep Learning and Computer Vision Techniques",
+      title:
+        "Automated Detection of Recyclable Waste in Real-Time Using Deep Learning and Computer Vision Techniques",
       file: "/paper/Ghouse_Research_Paper_2.pdf",
     },
     {
-      title: "Internet of Things-Based Arrhythmia Disease Prediction Using Machine Learning Techniques ",
+      title:
+        "Internet of Things-Based Arrhythmia Disease Prediction Using Machine Learning Techniques",
       file: "/paper/Ghouse_Research_Paper_1.pdf",
     },
   ],
 
   projects: [
     {
-      title: " Detection of Recyclable Waste in Real-Time",
+      title: "Detection of Recyclable Waste in Real-Time",
       summary:
         "Real-time waste classification using YOLOv5 + OpenCV with a FastAPI backend.",
       tags: ["Computer Vision", "YOLOv5", "FastAPI"],
@@ -66,19 +69,24 @@ I’m fascinated by how AI can support human creativity,its like having a partne
       title: "HR Analytics Dashboard",
       summary:
         "Power BI dashboard for workforce analytics — attrition, salary trends and KPIs.",
-      tags: ["SQL","Power BI", "ETL", "Visual Reports"],
+      tags: ["SQL", "Power BI", "ETL", "Visual Reports"],
       repo: "https://github.com/mohammed-ghouse-99/HR-Data-Cleaning-and-Analytics",
       image: "/images/pic2.jpg",
     },
   ],
 
   achievements: [
-  "Secured top positions in national and industry-level professional hackathons",
-  "Internship: Engineered a real-time scrap detection solution at MS Scrap Recyclers",
-  "Research & Publications: Contributed to multiple scholarly papers in academic volumes",
-],
-  footerNote: "Available for internships, freelance projects, and collaborative research.",
+    "Secured top positions in national and industry-level professional hackathons",
+    "Internship: Engineered a real-time scrap detection solution at MS Scrap Recyclers",
+    "Research & Publications: Contributed to multiple scholarly papers in academic volumes",
+  ],
+
+  footerNote:
+    "Available for internships, freelance projects, and collaborative research.",
 };
+
+
+
 
 // ------------------------------
 // COMPONENTS
