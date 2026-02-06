@@ -128,15 +128,15 @@ I'm fascinated by how AI can support human creativity — for me it's like havin
   researchPapers: [
     {
       title: "Automated Detection of Recyclable Waste in Real-Time Using Deep Learning and Computer Vision Techniques",
-      file: "/paper/Ghouse_Research_Paper_2.pdf",
-      conference: "International Conference on AI & Sustainability",
+      file: "https://zenodo.org/records/17699446",
+      conference: "International Journal of Science, Engineering and Technology",
       year: "2024",
       image: "/images/research1.jpeg" 
     },
     {
       title: "Internet of Things-Based Arrhythmia Disease Prediction Using Machine Learning Techniques",
       file: "/paper/Ghouse_Research_Paper_1.pdf",
-      conference: "Journal of Medical Systems",
+      conference: "National Student Conference on AI and Data Frontiers (NSCADF)",
       year: "2023",
       image: "/images/research2.jpeg"
     },
@@ -239,11 +239,11 @@ export default function Portfolio() {
 
   return (
     <div
-      className={`min-h-screen font-sans transition-colors duration-500 ${
+      className={`min-h-screen font-sans text-[17px] lg:text-[18px] transition-colors duration-500 ${
         dark ? "dark bg-gray-900 text-gray-100" : "bg-white text-gray-900"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-10 py-14">
         {/* NAVIGATION */}
         <header className="flex flex-col sm:flex-row items-center justify-between mb-16 py-6">
           <div className="flex items-center space-x-4">
@@ -286,7 +286,7 @@ export default function Portfolio() {
         </header>
 
         {/* HERO SECTION */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-28">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -352,15 +352,15 @@ export default function Portfolio() {
         </section>
 
         {/* SKILLS SECTION */}
-        <section className="mb-20">
+        <section className="mb-28">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Technical Expertise</h3>
-            <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+            <h3 className="text-5xl font-bold mb-6">Technical Expertise</h3>
+            <p className="text-gray-500 dark:text-gray-400 text-lg max-w-3xl mx-auto">
               A comprehensive skill set spanning from data analysis to full-stack development
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {Object.entries(DATA.technicalSkills).map(([category, skills], idx) => (
               <motion.div
                 key={category}
@@ -386,13 +386,13 @@ export default function Portfolio() {
         </section>
 
         {/* EXPERIENCE SECTION */}
-        <section id="experience" className="mb-20">
+        <section id="experience" className="mb-28">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Professional Journey</h3>
-            <p className="text-gray-500 dark:text-gray-400">Where I've applied my skills to solve real-world problems</p>
+            <h3 className="text-5xl font-bold mb-6">Professional Journey</h3>
+            <p className="text-gray-500 dark:text-gray-400 text-lg max-w-3xl mx-auto">Where I've applied my skills to solve real-world problems</p>
           </div>
           
-          <div className="space-y-8">
+          <div className="space-y-10">
             {DATA.experience.map((exp, index) => (
               <motion.div
                 key={index}
@@ -425,13 +425,13 @@ export default function Portfolio() {
         </section>
 
         {/* PROJECTS SECTION */}
-        <section id="projects" className="mb-20">
+        <section id="projects" className="mb-28">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Featured Projects</h3>
-            <p className="text-gray-500 dark:text-gray-400">End-to-end implementations showcasing technical capabilities</p>
+            <h3 className="text-5xl font-bold mb-6">Featured Projects</h3>
+            <p className="text-gray-500 dark:text-gray-400 text-lg max-w-3xl mx-auto">End-to-end implementations showcasing technical capabilities</p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {DATA.featuredProjects.filter(p => p.featured).map((project, index) => (
               <motion.div
                 key={index}
@@ -486,13 +486,13 @@ export default function Portfolio() {
         </section>
 
         {/* RESEARCH PAPERS */}
-        <section className="mb-20">
+        <section className="mb-28">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Research Contributions</h3>
-            <p className="text-gray-500 dark:text-gray-400">Academic papers contributing to the field of AI and ML</p>
+            <h3 className="text-5xl font-bold mb-6">Research Contributions</h3>
+            <p className="text-gray-500 dark:text-gray-400 text-lg max-w-3xl mx-auto">Academic papers contributing to the field of AI and ML</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {DATA.researchPapers.map((paper, i) => (
               <motion.div
                 key={i}
@@ -535,10 +535,10 @@ export default function Portfolio() {
         </section>
 
         {/* PROCESS SECTION */}
-        <section className="mb-20">
+        <section className="mb-28">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">My Development Process</h3>
-            <p className="text-gray-500 dark:text-gray-400">A structured approach to building robust ML solutions</p>
+            <h3 className="text-5xl font-bold mb-6">My Development Process</h3>
+            <p className="text-gray-500 dark:text-gray-400 text-lg max-w-3xl mx-auto">A structured approach to building robust ML solutions</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -561,10 +561,10 @@ export default function Portfolio() {
         </section>
 
         {/* CONTACT SECTION */}
-        <section id="contact" className="mb-20">
+        <section id="contact" className="mb-28">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Let's Work Together</h3>
-            <p className="text-gray-500 dark:text-gray-400">
+            <h3 className="text-5xl font-bold mb-6">Let's Work Together</h3>
+            <p className="text-gray-500 dark:text-gray-400 text-lg max-w-3xl mx-auto">
               Interested in collaboration? I'm available for internships, freelance projects, and research opportunities
             </p>
           </div>
