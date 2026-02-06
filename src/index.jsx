@@ -130,13 +130,15 @@ I'm fascinated by how AI can support human creativity — for me it's like havin
       title: "Automated Detection of Recyclable Waste in Real-Time Using Deep Learning and Computer Vision Techniques",
       file: "/paper/Ghouse_Research_Paper_2.pdf",
       conference: "International Conference on AI & Sustainability",
-      year: "2024"
+      year: "2024",
+      image: "/images/research1.jpeg" 
     },
     {
       title: "Internet of Things-Based Arrhythmia Disease Prediction Using Machine Learning Techniques",
       file: "/paper/Ghouse_Research_Paper_1.pdf",
       conference: "Journal of Medical Systems",
-      year: "2023"
+      year: "2023",
+      image: "/images/research2.jpeg"
     },
   ],
 
@@ -490,28 +492,42 @@ export default function Portfolio() {
             <p className="text-gray-500 dark:text-gray-400">Academic papers contributing to the field of AI and ML</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {DATA.researchPapers.map((paper, i) => (
               <motion.div
                 key={i}
-                whileHover={{ scale: 1.02 }}
-                className="p-6 border border-gray-300 dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-900 hover:shadow-lg transition-shadow"
+                whileHover={{ y: -8 }}
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-300 dark:border-gray-700 group"
               >
-                <div className="flex items-start gap-4">
+                {/* IMAGE */}
+                <div className="h-48 bg-gray-100 dark:bg-gray-900 overflow-hidden">
+                  <img
+                    src={paper.image}
+                    alt={paper.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* CONTENT */}
+                <div className="p-6">
+                  <h4 className="font-bold text-lg mb-2">{paper.title}</h4>
+
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                    {paper.conference}
+                  </p>
+
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    Published: {paper.year}
+                  </p>
+
                   <a
                     href={paper.file}
-                    download
-                    className="px-6 py-3 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white font-semibold rounded-md whitespace-nowrap"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-md font-semibold transition"
                   >
-                    View Paper
+                    <FaFilePdf /> View Paper
                   </a>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2">{paper.title}</h4>
-                    <div className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                      <p>{paper.conference}</p>
-                      <p>Published: {paper.year}</p>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             ))}
