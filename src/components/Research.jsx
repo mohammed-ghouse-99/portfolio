@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { FaFilePdf, FaExternalLinkAlt, FaArrowLeft } from "react-icons/fa";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { FaFilePdf, FaExternalLinkAlt } from "react-icons/fa";
 
 const PAPERS = [
   {
@@ -29,64 +26,48 @@ const PAPERS = [
   },
 ];
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 },
-  }),
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function ResearchPapers() {
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+};
+
+export default function Research() {
   return (
-    <div className="min-h-screen bg-[#090D16] text-white font-sans">
-      <Navbar activeSection="" />
-
-      <main className="max-w-5xl mx-auto px-6 lg:px-10 pt-28 pb-24">
-        {/* Back */}
-        <motion.div
-          initial={{ opacity: 0, x: -12 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-12"
-        >
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-teal-400 transition-colors font-medium"
-          >
-            <FaArrowLeft className="text-xs" />
-            Back to Portfolio
-          </Link>
-        </motion.div>
-
-        {/* Header */}
+    <section id="research" className="py-28 border-t border-white/[0.05]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
           <p className="text-teal-400 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
-            ACADEMIC WORK
+            ACADEMIC CONTRIBUTIONS
           </p>
-          <h1 className="text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-            Research Publications
-          </h1>
-          <p className="text-white/40 text-base mt-4 max-w-xl leading-relaxed">
-            Peer-reviewed papers contributing to the fields of Computer Vision, IoT, and Applied Machine Learning.
-          </p>
+          <h2 className="text-4xl lg:text-5xl font-black text-white tracking-tight">
+            Research Papers
+          </h2>
         </motion.div>
 
-        {/* Papers */}
-        <div className="space-y-8">
-          {PAPERS.map((paper, i) => (
+        {/* Papers list */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
+          {PAPERS.map((paper) => (
             <motion.div
               key={paper.id}
-              custom={i}
               variants={fadeUp}
-              initial="hidden"
-              animate="show"
               className="glass-card rounded-2xl overflow-hidden hover:border-white/10 transition-all duration-300 hover:-translate-y-0.5 group"
             >
               <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-0">
@@ -110,9 +91,9 @@ export default function ResearchPapers() {
                       <span className="text-xs text-white/30">{paper.year}</span>
                     </div>
 
-                    <h2 className="text-base font-bold text-white leading-snug mb-3 group-hover:text-teal-400 transition-colors">
+                    <h3 className="text-lg font-bold text-white leading-snug mb-3 group-hover:text-teal-400 transition-colors">
                       {paper.title}
-                    </h2>
+                    </h3>
 
                     <p className="text-sm text-white/40 leading-relaxed mb-3">
                       {paper.abstract}
@@ -147,10 +128,8 @@ export default function ResearchPapers() {
               </div>
             </motion.div>
           ))}
-        </div>
-      </main>
-
-      <Footer />
-    </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
