@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="public/images/profilepic.jpg" />
+    <link rel="icon" type="image/png" href="/images/profilepic.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohammed Ghouse — Data & AIML Engineer</title>
     <meta name="description" content="Mohammed Ghouse Mohiuddin — Data & AIML Engineer. Building intelligent, data-driven solutions with AIML, Computer Vision, and AI." />
@@ -12,6 +12,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+      // Generate circular favicon from profile photo
+      window.addEventListener("DOMContentLoaded", function () {
+        var img = new Image();
+        img.crossOrigin = "anonymous";
+        img.onload = function () {
+          var size = 64;
+          var canvas = document.createElement("canvas");
+          canvas.width = size;
+          canvas.height = size;
+          var ctx = canvas.getContext("2d");
+          ctx.beginPath();
+          ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.clip();
+          ctx.drawImage(img, 0, 0, size, size);
+          var link = document.querySelector("link[rel='icon']");
+          if (link) {
+            link.href = canvas.toDataURL("image/png");
+          }
+        };
+        img.src = "/images/profilepic.jpg";
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

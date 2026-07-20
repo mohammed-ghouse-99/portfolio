@@ -40,7 +40,7 @@ export default function Loader({ onComplete }) {
           transition={{ duration: 0.4 }}
           className="text-3xl font-black tracking-tight text-white mb-12"
         >
-          Ghouse
+          Mohammed Ghouse Mohiuddin
         </motion.div>
 
         {/* Progress bar */}

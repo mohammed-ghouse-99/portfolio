@@ -193,7 +193,7 @@ ${form.message || ""}`;
               className="w-full py-3 bg-teal-400 text-[#090D16] rounded-lg font-bold text-sm hover:bg-teal-300 transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               <FaWhatsapp className="text-base" />
-              {loading ? "Opening Chat…" : "Send via WhatsApp"}
+              {loading ? "Connecting…" : "Connect Now"}
             </button>
 
             <AnimatePresence>

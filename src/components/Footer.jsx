@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <Link to="/" className="text-lg font-black text-white hover:text-teal-400 transition-colors">
-            Ghouse
+            Mohammed Ghouse Mohiuddin
           </Link>
 
           {/* Nav */}
