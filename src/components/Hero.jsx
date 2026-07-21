@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
 
 const DATA = {
@@ -25,37 +24,10 @@ const fadeUp = {
 };
 
 export default function Hero() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const { clientX, clientY } = e;
-      const x = (clientX - window.innerWidth / 2) / 45;
-      const y = (clientY - window.innerHeight / 2) / 45;
-      setMousePos({ x, y });
-    };
-
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const scrollTo = (id) => {
     const el = document.querySelector(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
-
-  // Combine scroll offset (-10% speed) and mouse offset for a fluid 3D feel
-  const parallaxY = mousePos.y - scrollY * 0.12;
 
   return (
     <section
@@ -73,12 +45,8 @@ export default function Hero() {
         <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[130px] z-10 pointer-events-none mix-blend-screen" />
         <div className="absolute bottom-[15%] right-0 w-[500px] h-[500px] bg-rose-500/5 rounded-full blur-[130px] z-10 pointer-events-none mix-blend-screen" />
 
-        {/* Parallax Image Wrapper */}
-        <motion.div
-          animate={{ x: mousePos.x, y: parallaxY }}
-          transition={{ type: "spring", stiffness: 65, damping: 28 }}
-          className="w-full h-full relative"
-        >
+        {/* Image */}
+        <div className="w-full h-full relative">
           <img
             src={DATA.photo}
             alt="Mohammed Ghouse Mohiuddin Background"
@@ -86,7 +54,7 @@ export default function Hero() {
           />
           {/* Dual tone soft color overlay mapping directly to photo */}
           <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/10 via-transparent to-rose-500/5 mix-blend-color-dodge z-10" />
-        </motion.div>
+        </div>
       </div>
 
       {/* Main Grid Content */}
