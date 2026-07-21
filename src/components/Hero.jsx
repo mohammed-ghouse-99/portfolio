@@ -65,8 +65,8 @@ export default function Hero() {
       {/* Background Interactive Profile Portrait */}
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[58%] h-[110%] pointer-events-none overflow-hidden z-0 select-none">
         {/* Soft edge fade masks for smooth transition into deep background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#090D16] via-[#090D16] lg:via-[#090D16]/50 to-[#090D16]/80 lg:to-transparent z-10" />
-        <div className="absolute inset-x-0 bottom-0 h-[35%] bg-gradient-to-t from-[#090D16] via-[#090D16]/30 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#090D16] via-[#090D16]/50 lg:via-[#090D16]/50 to-[#090D16]/30 lg:to-transparent z-10" />
+        <div className="absolute inset-x-0 bottom-0 h-[25%] lg:h-[35%] bg-gradient-to-t from-[#090D16] via-[#090D16]/30 to-transparent z-10" />
         <div className="absolute inset-x-0 top-0 h-[25%] bg-gradient-to-b from-[#090D16] via-[#090D16]/10 to-transparent z-10" />
         
         {/* Ambient teal & rose color glows */}
@@ -82,7 +82,7 @@ export default function Hero() {
           <img
             src={DATA.photo}
             alt="Mohammed Ghouse Mohiuddin Background"
-            className="w-full h-full object-cover object-[center_12%] opacity-[0.25] lg:opacity-[0.38] mix-blend-lighten grayscale hover:grayscale-0 transition-all duration-1000"
+            className="w-full h-full object-cover object-[center_20%] lg:object-[center_12%] opacity-[0.35] lg:opacity-[0.38] mix-blend-lighten grayscale hover:grayscale-0 transition-all duration-1000"
           />
           {/* Dual tone soft color overlay mapping directly to photo */}
           <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/10 via-transparent to-rose-500/5 mix-blend-color-dodge z-10" />
